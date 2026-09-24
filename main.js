@@ -1,0 +1,4 @@
+const prompt = require('prompt-sync')
+const ajoutercandidat=require('./function/programe_function/ajoutercandidat.js')
+const ajouterplusieurcnd=require('./function/programe_function/ajouterplusieurcnd.js')
+const affichercandidat=require('./function/programe_function/affichercandidat.js')
