@@ -4,3 +4,4 @@ const ajouterplusieurcnd=require('./function/programe_function/ajouterplusieurcn
 const affichercandidat=require('./function/programe_function/affichercandidat.js')
 const ajouterVote=require('./function/programe_function/ajoutervote.js')
 const modiferinfocandidat=require('./function/programe_function/modifierinfocandidat.js')
+const suprimerCandidat=require('./function/programe_function/suprimercandidat.js')
