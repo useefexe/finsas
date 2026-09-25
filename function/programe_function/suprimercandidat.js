@@ -1,5 +1,5 @@
 const prompt=require('prompt-sync')()
-const splice=require('../retulisable-fct/spliice.js')
+const remove=require('../retulisable-fct/remove.js')
 const findcandidat=require('../retulisable-fct/findcandidat.js')
 
 function suprimerCandidat(candidatarry){
@@ -11,7 +11,7 @@ function suprimerCandidat(candidatarry){
              console.log("\x1b[31m cin de candidat non trouvable voir liste de candidat et ressayer    \x1b[0m");
      }
      else{
-       splice(candidatarry,cin)
+       remove(candidatarry,cin)
         console.log("\x1b[32m  candidat suprimer avec succses    \x1b[0m");
      }
 }

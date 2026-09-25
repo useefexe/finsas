@@ -1,5 +1,5 @@
 const prompt = require('prompt-sync')()
-const findcandidat = require('../retulisable-fct/findcandidat.js')
+const findcandidat=require('../retulisable-fct/findcandidat.js')
 
 function modiferinfocandidat(candidatarry) {
   console.log("\n")
@@ -15,7 +15,7 @@ function modiferinfocandidat(candidatarry) {
       console.log("\x1b[31m modification d age non effectuer il faut entrer un age valide  \x1b[0m");
     }
     const partiPolitique = prompt("entere le neveau partie politique  |" + candidatarry[index].nom + " |pour skipper modification d age cliquer sur " + "\x1b[35m 0  '\x1b[0m" + ":")
-    if (age !== '0' && partiPolitique !== "") {
+    if ( partiPolitique !== "") {
       candidatarry[index].partiPolitique = partiPolitique
     }
     if (partiPolitique === "") {
@@ -26,5 +26,7 @@ function modiferinfocandidat(candidatarry) {
     console.log("\x1b[31m cin de candidat non trouvable voir liste de candidat et ressayer    \x1b[0m");
   }
   console.log("\n")
-}   
+}  
+
+
 module.exports=modiferinfocandidat
