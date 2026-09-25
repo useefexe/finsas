@@ -1,9 +1,9 @@
-function calLnght(arry){
-    let count =0
+function calLnght(arry) {
+    let count = 0
     for (el in arry) {
         count++
-        
+
     }
-    return count 
+    return count
 }
-module.exports=calLnght
+module.exports = calLnght
