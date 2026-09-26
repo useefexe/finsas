@@ -1,30 +1,5 @@
 const lnght=require('./lenght.js')
-let arr=[
-  {
-    cin: 'QR345678',
-    nom: 'El Amrani',
-    prenom: 'Omar',
-    partiPolitique: 'Alliance Nationale',
-    age: 52,
-    electeurs: [ 'ST678901', 'UV123456', 'WX789012', 'YZ345678' ]
-  },
-  {
-    cin: 'XY654321',
-    nom: 'Alaoui',
-    prenom: 'Yassine',
-    partiPolitique: 'Parti du Progrès',
-    age: 35,
-    electeurs: [ 'GH123456', 'IJ789012', 'KL345678' ]
-  },
-  {
-    cin: 'AB123456',
-    nom: 'Boushaba',
-    prenom: 'Soufiane',
-    partiPolitique: 'Alliance Nationale',
-    age: 40,
-    electeurs: [ 'CD987654', 'EF456789' ]
-  }
-]
+
 function politiquesort(array){
      const res=[]
 
@@ -41,17 +16,24 @@ function politiquesort(array){
    
     for (let i = 0; i < lnght(array); i++) {
         let count=0
+        let candidat=[]
          if( politiquefind(res,array[i].partiPolitique)===-1){
         for (let j = 0; j < lnght(array); j++) {
            
            if(array[i].partiPolitique===array[j].partiPolitique ){
+            candidat.push(array[i].cin)
            count++
            }}
         
-        let partipol={name:array[i].partiPolitique,count:count}
+         let partipol={
+            name:array[i].partiPolitique,
+            count:count,
+            candidat:candidat
+        }
         res.push(partipol)}
         
     }
     return  res
 }
+
 module.exports=politiquesort

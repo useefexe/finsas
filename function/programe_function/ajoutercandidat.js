@@ -13,7 +13,11 @@ const findcincandidat = require('../retulisable-fct/findcandidat')
     if (partiPolitique === "") {
         partiPolitique = "Indépendant"
     }
-    let age = prompt("enter l age de  candidat   ")
+    let age =NaN
+    while (isNaN(age)) {
+        age= prompt("enter un age  valide de  candidat   ")
+    }
+    
     const candidat = {
         cin: candidatcin,
         nom: nom,

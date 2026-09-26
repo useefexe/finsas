@@ -7,14 +7,14 @@ function modiferinfocandidat(candidatarry) {
   const cincand = prompt(" entere  cin de candidat : ")
   let index = findcandidat(candidatarry, cincand)
   if (index !== -1) {
-    const age = prompt("entere le neveau age de candidat |" + candidatarry[index].nom + "| pour skipper modification d age cliquer sur " + "\x1b[35m 0  '\x1b[0m" + ":")
+    const age = prompt("entere le neveau age de candidat |" + candidatarry[index].nom + "| pour skipper modification  cliquer sur " + "\x1b[35m 0  '\x1b[0m" + ":")
     if (age !== '0' && isNaN(Number(age)) === false) {
       candidatarry[index].age = Number(age)
     }
     if (isNaN(Number(age))) {
       console.log("\x1b[31m modification d age non effectuer il faut entrer un age valide  \x1b[0m");
     }
-    const partiPolitique = prompt("entere le neveau partie politique  |" + candidatarry[index].nom + " |pour skipper modification d age cliquer sur " + "\x1b[35m 0  '\x1b[0m" + ":")
+    const partiPolitique = prompt("entere le neveau partie politique  |" + candidatarry[index].nom + " |pour skipper modification  cliquer sur " + "\x1b[35m 0  '\x1b[0m" + ":")
     if ( partiPolitique !== "") {
       candidatarry[index].partiPolitique = partiPolitique
     }
