@@ -2,19 +2,21 @@ const prompt = require('prompt-sync')()
 const findcincandidat = require('../retulisable-fct/findcandidat')
 //=
  function Ajoutercandidat(array) {
-    console.log("\x1b[33m===========================ajouter un candidat=============================== '\x1b[0m");
-    let candidatcin = undefined
-    do {
+    console.log("\x1b[33m===========================ajouter un candidat=============================== \x1b[0m");
+    let candidatcin = ""
+    do {  
         candidatcin = prompt("entrer un cin qui n existe pas dans la base de donne ")
-    } while (findcincandidat(array, candidatcin) !== -1 && candidatcin !== undefined)
+    } while (findcincandidat(array, candidatcin) !== -1 || candidatcin === "")
+
     let nom = prompt("enter le nom de candidat  ")
     let prennom = prompt("enter le prenom de candidat  ")
     let partiPolitique = prompt("enter la partie politique de candidat   ")
     if (partiPolitique === "") {
         partiPolitique = "Indépendant"
     }
+
     let age =NaN
-    while (isNaN(age)) {
+    while (isNaN(age) ||age==='') {
         age= prompt("enter un age  valide de  candidat   ")
     }
     

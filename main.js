@@ -7,7 +7,28 @@ const modiferinfocandidat=require('./function/programe_function/modifierinfocand
 const suprimerCandidat=require('./function/programe_function/suprimercandidat.js')
 const recherchercandidat=require('./function/programe_function/recherchercandidat.js')
 const afiicherstat=require('./function/programe_function/statistique.js')
-const votearr=[]
+
+const votearr=[    "EL400001", "EL400002", "EL400003", "EL400004",
+    "EL400005", "EL400006", "EL400007", "EL400008",
+
+    "EL600001", "EL600002", "EL600003", "EL600004",
+    "EL600005", "EL600006", "EL600007", "EL600008",
+    "EL600009",
+
+    "EL700001", "EL700002", "EL700003", "EL700004",
+    "EL700005", "EL700006",
+
+    "EL900001", "EL900002", "EL900003", "EL900004",
+
+    "EL1000011", "EL1000012", "EL1000013", "EL1000014",
+    "EL1000015", "EL1000016", "EL1000017",
+
+    "EL110001", "EL110002", "EL110003", "EL110004",
+    "EL110005", "EL110006", "EL110007", "EL110008",
+    "EL110009", "EL110010",
+
+    "EL120001"]
+
 const candidat=[{
         cin: "GH456789",
         nom: "El Idrissi",
@@ -129,20 +150,19 @@ const candidat=[{
 let choix;
 
 do {
-    console.log("\n\x1b[36m=============== MENU PRINCIPAL=================\x1b[0m");
-    console.log("\x1b[37m1. Ajouter un nouveau candidat\x1b[0m");
-    console.log("\x1b[37m2. Ajouter plusieurs candidats\x1b[0m");
-    console.log("\x1b[37m3. Afficher la liste des candidats\x1b[0m");
-    console.log("\x1b[37m4. Voter pour un candidat\x1b[0m");
-    console.log("\x1b[37m5. Modifier les informations d'un candidat\x1b[0m");
-    console.log("\x1b[37m6. Supprimer un candidat\x1b[0m");
-    console.log("\x1b[37m7. Rechercher un candidat\x1b[0m");
-    console.log("\x1b[37m8. Statistiques de l'élection\x1b[0m");
-    console.log("\x1b[33m0. Quitter\x1b[0m");
+    console.log("\n\x1b[36m=============== MENU PRINCIPAL========================\x1b[0m");
+    console.log("  1. Ajouter un nouveau candidat ");
+    console.log("  2. Ajouter plusieurs candidats ");
+    console.log("  3. Afficher la liste des candidats ");
+    console.log("  4. Voter pour un candidat ");
+    console.log("  5. Modifier les informations d'un candidat ");
+    console.log("  6. Supprimer un candidat ");
+    console.log("  7. Rechercher un candidat ");
+    console.log("  8. Statistiques de l'élection ");
+    console.log("\x1b[33m  9. Quitter\x1b[0m");
     console.log("\x1b[36m======================================================\x1b[0m");
 
     choix = Number(prompt("Choisissez une option : "));
-    console.log("\n4")
 
     switch (choix) {
         case 1:
@@ -174,10 +194,10 @@ do {
             break;
 
         case 8:
-            afiicherstat(candidat);
+            afiicherstat(candidat,votearr);
             break;
 
-        case 0:
+        case 9:
             console.log("\x1b[33mAu revoir !\x1b[0m");
             break;
 
@@ -185,4 +205,4 @@ do {
             console.log("\x1b[31mChoix invalide ! Réessayez.\x1b[0m");
     }
 
-} while (choix !== 0);
+} while (choix !== 9); 

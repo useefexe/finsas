@@ -6,4 +6,5 @@ function calLnght(arry) {
     }
     return count
 }
+
 module.exports = calLnght

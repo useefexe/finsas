@@ -11,7 +11,7 @@ function suprimerCandidat(candidatarry){
              console.log("\x1b[31m cin de candidat non trouvable voir liste de candidat et ressayer    \x1b[0m");
      }
      else{
-       remove(candidatarry,cin)
+       remove(candidatarry,index)
         console.log("\x1b[32m  candidat suprimer avec succses    \x1b[0m");
      }
 }

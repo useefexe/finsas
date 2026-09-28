@@ -1,6 +1,5 @@
 const prompt = require('prompt-sync')()
 const Ajoutercandidat = require('./ajoutercandidat.js')
-const lnght = require('../retulisable-fct/findcandidat.js')
 
 function ajouterplusieurcnd(array) {
     console.log("====================================================================================================================")
